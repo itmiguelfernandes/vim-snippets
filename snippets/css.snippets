@@ -104,7 +104,7 @@ snippet bgz:cv
 snippet bg
 	background: ${0};
 snippet bg:ie
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='${1}',sizingMethod='${0:crop}');
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="${1}",sizingMethod="${0:crop}");
 snippet bg:n
 	background: none;
 snippet bd+
@@ -464,15 +464,15 @@ snippet fem
 snippet ff
 	font-family: ${0};
 snippet ff:c
-	font-family: ${0:'Monotype Corsiva','Comic Sans MS'},cursive;
+	font-family: ${0:"Monotype Corsiva","Comic Sans MS"},cursive;
 snippet ff:f
 	font-family: ${0:Capitals,Impact},fantasy;
 snippet ff:m
-	font-family: ${0:Monaco,'Courier New'},monospace;
+	font-family: ${0:Monaco,"Courier New"},monospace;
 snippet ff:ss
 	font-family: ${0:Helvetica,Arial},sans-serif;
 snippet ff:s
-	font-family: ${0:Georgia,'Times New Roman'},serif;
+	font-family: ${0:Georgia,"Times New Roman"},serif;
 snippet fza
 	font-size-adjust: ${0};
 snippet fza:n
@@ -622,7 +622,7 @@ snippet op
 snippet op:ie
 	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=${0:100});
 snippet op:ms
-	-ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=${0:100})';
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=${0:100})";
 snippet orp
 	orphans: ${0};
 snippet o+
@@ -740,11 +740,11 @@ snippet pos:s
 snippet q
 	quotes: ${0};
 snippet q:en
-	quotes: '\201C' '\201D' '\2018' '\2019';
+	quotes: "\201C" "\201D" "\2018" "\2019";
 snippet q:n
 	quotes: none;
 snippet q:ru
-	quotes: '\00AB' '\00BB' '\201E' '\201C';
+	quotes: "\00AB" "\00BB" "\201E" "\201C";
 snippet rz
 	resize: ${0};
 snippet rz:b
