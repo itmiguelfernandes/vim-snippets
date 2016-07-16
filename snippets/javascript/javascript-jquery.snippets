@@ -1,15 +1,15 @@
 snippet add
-	${1:obj}.add('${2:selector expression}')
+	${1:obj}.add("${2:selector expression}")
 snippet addClass
-	${1:obj}.addClass('${2:class name}')
+	${1:obj}.addClass("${2:class name}")
 snippet after
-	${1:obj}.after('${2:Some text <b>and bold!</b>}')
+	${1:obj}.after("${2:Some text <b>and bold!</b>}")
 snippet ajax
 	$.ajax({
-		url: '${1:mydomain.com/url}',
-		type: '${2:POST}',
-		dataType: '${3:xml/html/script/json}',
-		data: $.param( $('${4:Element or Expression}') ),
+		url: "${1:mydomain.com/url}",
+		type: "${2:POST}",
+		dataType: "${3:xml/html/script/json}",
+		data: $.param( $("${4:Element or Expression}") ),
 		complete: function (jqXHR, textStatus) {
 			${5:// callback}
 		},
@@ -30,14 +30,14 @@ snippet ajaxerror
 	});
 	${0}
 snippet ajaxget
-	$.get('${1:mydomain.com/url}',
+	$.get("${1:mydomain.com/url}",
 		${2:{ param1: value1 },}
 		function (data, textStatus, jqXHR) {
 			${0:// success callback}
 		}
 	);
 snippet ajaxpost
-	$.post('${1:mydomain.com/url}',
+	$.post("${1:mydomain.com/url}",
 		${2:{ param1: value1 },}
 		function (data, textStatus, jqXHR) {
 			${0:// success callback}
@@ -88,17 +88,17 @@ snippet andself
 snippet animate
 	${1:obj}.animate({${2:param1: value1, param2: value2}}, ${3:speed})
 snippet append
-	${1:obj}.append('${2:Some text <b>and bold!</b>}')
+	${1:obj}.append("${2:Some text <b>and bold!</b>}")
 snippet appendTo
-	${1:obj}.appendTo('${2:selector expression}')
+	${1:obj}.appendTo("${2:selector expression}")
 snippet attr
-	${1:obj}.attr('${2:attribute}', '${3:value}')
+	${1:obj}.attr("${2:attribute}", "${3:value}")
 snippet attrm
-	${1:obj}.attr({'${2:attr1}': '${3:value1}', '${4:attr2}': '${5:value2}'})
+	${1:obj}.attr({"${2:attr1}": "${3:value1}", "${4:attr2}": "${5:value2}"})
 snippet before
-	${1:obj}.before('${2:Some text <b>and bold!</b>}')
+	${1:obj}.before("${2:Some text <b>and bold!</b>}")
 snippet bind
-	${1:obj}.bind('${2:event name}', function (${3:e}) {
+	${1:obj}.bind("${2:event name}", function (${3:e}) {
 		${0:// event handler}
 	});
 snippet blur
@@ -132,9 +132,9 @@ snippet change
 		${0:// event handler}
 	});
 snippet children
-	${1:obj}.children('${2:selector expression}')
+	${1:obj}.children("${2:selector expression}")
 snippet clearq
-	${1:obj}.clearQueue(${2:'queue name'})
+	${1:obj}.clearQueue(${2:"queue name"})
 snippet click
 	${1:obj}.click(function (${2:e}) {
 		${0:// event handler}
@@ -144,9 +144,9 @@ snippet clone
 snippet contains
 	$.contains(${1:container}, ${0:contents});
 snippet css
-	${1:obj}.css('${2:attribute}', '${3:value}')
+	${1:obj}.css("${2:attribute}", "${3:value}")
 snippet csshooks
-	$.cssHooks['${1:CSS prop}'] = {
+	$.cssHooks["${1:CSS prop}"] = {
 		get: function (elem, computed, extra) {
 			${2: // handle getting the CSS property}
 		},
@@ -155,7 +155,7 @@ snippet csshooks
 		}
 	};
 snippet cssm
-	${1:obj}.css({${2:attribute1}: '${3:value1}', ${4:attribute2}: '${5:value2}'})
+	${1:obj}.css({${2:attribute1}: "${3:value1}", ${4:attribute2}: "${5:value2}"})
 snippet D
 	$.Deferred()
 snippet Dalways
@@ -195,23 +195,23 @@ snippet Dwhen
 snippet data
 	${1:obj}.data(${2:obj})
 snippet dataa
-	$.data('${1:selector expression}', '${2:key}'${3:, 'value'})
+	$.data("${1:selector expression}", "${2:key}"${3:, "value"})
 snippet dblclick
 	${1:obj}.dblclick(function (${2:e}) {
 		${0:// event handler}
 	});
 snippet delay
-	${1:obj}.delay('${2:slow/400/fast}'${3:, 'queue name'})
+	${1:obj}.delay("${2:slow/400/fast}"${3:, "queue name"})
 snippet dele
-	${1:obj}.delegate('${2:selector expression}', '${3:event name}', function (${4:e}) {
+	${1:obj}.delegate("${2:selector expression}", "${3:event name}", function (${4:e}) {
 		${0:// event handler}
 	});
 snippet deq
-	${1:obj}.dequeue(${2:'queue name'})
+	${1:obj}.dequeue(${2:"queue name"})
 snippet deqq
-	$.dequeue('${1:selector expression}'${2:, 'queue name'})
+	$.dequeue("${1:selector expression}"${2:, "queue name"})
 snippet detach
-	${1:obj}.detach('${2:selector expression}')
+	${1:obj}.detach("${2:selector expression}")
 snippet die
 	${1:obj}.die(${2:event}, ${3:handler})
 snippet each
@@ -219,9 +219,9 @@ snippet each
 		${0:this.innerHTML = this + " is the element, " + index + " is the position";}
 	});
 snippet el
-	$('<${1}/>'${2:, {}})
+	$("<${1}/>"${2:, {}})
 snippet eltrim
-	$.trim('${1:string}')
+	$.trim("${1:string}")
 snippet empty
 	${1:obj}.empty()
 snippet end
@@ -239,31 +239,31 @@ snippet eventsmap
 snippet extend
 	$.extend(${1:true, }${2:target}, ${3:obj})
 snippet fadein
-	${1:obj}.fadeIn('${2:slow/400/fast}')
+	${1:obj}.fadeIn("${2:slow/400/fast}")
 snippet fadeinc
-	${1:obj}.fadeIn('slow/400/fast', function () {
+	${1:obj}.fadeIn("slow/400/fast", function () {
 		${0:// callback};
 	});
 snippet fadeout
-	${1:obj}.fadeOut('${2:slow/400/fast}')
+	${1:obj}.fadeOut("${2:slow/400/fast}")
 snippet fadeoutc
-	${1:obj}.fadeOut('slow/400/fast', function () {
+	${1:obj}.fadeOut("slow/400/fast", function () {
 		${0:// callback};
 	});
 snippet fadeto
-	${1:obj}.fadeTo('${2:slow/400/fast}', ${3:0.5})
+	${1:obj}.fadeTo("${2:slow/400/fast}", ${3:0.5})
 snippet fadetoc
-	${1:obj}.fadeTo('slow/400/fast', ${2:0.5}, function () {
+	${1:obj}.fadeTo("slow/400/fast", ${2:0.5}, function () {
 		${0:// callback};
 	});
 snippet filter
-	${1:obj}.filter('${2:selector expression}')
+	${1:obj}.filter("${2:selector expression}")
 snippet filtert
 	${1:obj}.filter(function (${2:index}) {
 		${3}
 	})
 snippet find
-	${1:obj}.find('${2:selector expression}')
+	${1:obj}.find("${2:selector expression}")
 snippet focus
 	${1:obj}.focus(function (${2:e}) {
 		${0:// event handler}
@@ -279,14 +279,14 @@ snippet focusout
 snippet get
 	${1:obj}.get(${2:element index})
 snippet getjson
-	$.getJSON('${1:mydomain.com/url}',
+	$.getJSON("${1:mydomain.com/url}",
 		${2:{ param1: value1 },}
 		function (data, textStatus, jqXHR) {
 			${0:// success callback}
 		}
 	);
 snippet getscript
-	$.getScript('${1:mydomain.com/url}', function (script, textStatus, jqXHR) {
+	$.getScript("${1:mydomain.com/url}", function (script, textStatus, jqXHR) {
 		${0:// callback}
 	});
 snippet grep
@@ -294,15 +294,15 @@ snippet grep
 		${2}
 	}${0:, true});
 snippet hasc
-	${1:obj}.hasClass('${2:className}')
+	${1:obj}.hasClass("${2:className}")
 snippet hasd
-	$.hasData('${0:selector expression}');
+	$.hasData("${0:selector expression}");
 snippet height
 	${1:obj}.height(${2:integer})
 snippet hide
-	${1:obj}.hide('${2:slow/400/fast}')
+	${1:obj}.hide("${2:slow/400/fast}")
 snippet hidec
-	${1:obj}.hide('${2:slow/400/fast}', function () {
+	${1:obj}.hide("${2:slow/400/fast}", function () {
 		${0:// callback}
 	});
 snippet hover
@@ -312,15 +312,15 @@ snippet hover
 		${4:// event handler}
 	});
 snippet html
-	${1:obj}.html('${2:Some text <b>and bold!</b>}')
+	${1:obj}.html("${2:Some text <b>and bold!</b>}")
 snippet inarr
 	$.inArray(${1:value}, ${0:array});
 snippet insa
-	${1:obj}.insertAfter('${2:selector expression}')
+	${1:obj}.insertAfter("${2:selector expression}")
 snippet insb
-	${1:obj}.insertBefore('${2:selector expression}')
+	${1:obj}.insertBefore("${2:selector expression}")
 snippet is
-	${1:obj}.is('${2:selector expression}')
+	${1:obj}.is("${2:selector expression}")
 snippet isarr
 	$.isArray(${1:obj})
 snippet isempty
@@ -336,7 +336,7 @@ snippet iswin
 snippet isxml
 	$.isXMLDoc(${1:node})
 snippet jj
-	$('${1:selector}')
+	$("${1:selector}")
 snippet kdown
 	${1:obj}.keydown(function (${2:e}) {
 		${0:// event handler}
@@ -350,9 +350,9 @@ snippet kup
 		${0:// event handler}
 	});
 snippet last
-	${1:obj}.last('${1:selector expression}')
+	${1:obj}.last("${1:selector expression}")
 snippet live
-	${1:obj}.live('${2:events}', function (${3:e}) {
+	${1:obj}.live("${2:events}", function (${3:e}) {
 		${0:// event handler}
 	});
 snippet load
@@ -360,7 +360,7 @@ snippet load
 		${0:// event handler}
 	});
 snippet loadf
-	${1:obj}.load('${2:mydomain.com/url}',
+	${1:obj}.load("${2:mydomain.com/url}",
 		${2:{ param1: value1 },}
 		function (responseText, textStatus, xhr) {
 			${0:// success callback}
@@ -407,25 +407,25 @@ snippet mup
 		${0:// event handler}
 	});
 snippet next
-	${1:obj}.next('${2:selector expression}')
+	${1:obj}.next("${2:selector expression}")
 snippet nexta
-	${1:obj}.nextAll('${2:selector expression}')
+	${1:obj}.nextAll("${2:selector expression}")
 snippet nextu
-	${1:obj}.nextUntil('${2:selector expression}'${3:, 'filter expression'})
+	${1:obj}.nextUntil("${2:selector expression}"${3:, "filter expression"})
 snippet not
-	${1:obj}.not('${2:selector expression}')
+	${1:obj}.not("${2:selector expression}")
 snippet off
-	${1:obj}.off('${2:events}', '${3:selector expression}'${4:, handler})
+	${1:obj}.off("${2:events}", "${3:selector expression}"${4:, handler})
 snippet offset
 	${1:obj}.offset()
 snippet offsetp
 	${1:obj}.offsetParent()
 snippet on
-	${1:obj}.on('${2:events}', '${3:selector expression}', function (${4:e}) {
+	${1:obj}.on("${2:events}", "${3:selector expression}", function (${4:e}) {
 		${0:// event handler}
 	});
 snippet one
-	${1:obj}.one('${2:event name}', function (${3:e}) {
+	${1:obj}.one("${2:event name}", function (${3:e}) {
 		${0:// event handler}
 	});
 snippet outerh
@@ -435,11 +435,11 @@ snippet outerw
 snippet param
 	$.param(${1:obj})
 snippet parent
-	${1:obj}.parent('${2:selector expression}')
+	${1:obj}.parent("${2:selector expression}")
 snippet parents
-	${1:obj}.parents('${2:selector expression}')
+	${1:obj}.parents("${2:selector expression}")
 snippet parentsu
-	${1:obj}.parentsUntil('${2:selector expression}'${3:, 'filter expression'})
+	${1:obj}.parentsUntil("${2:selector expression}"${3:, "filter expression"})
 snippet parsejson
 	$.parseJSON(${1:data})
 snippet parsexml
@@ -447,19 +447,19 @@ snippet parsexml
 snippet pos
 	${1:obj}.position()
 snippet prepend
-	${1:obj}.prepend('${2:Some text <b>and bold!</b>}')
+	${1:obj}.prepend("${2:Some text <b>and bold!</b>}")
 snippet prependto
-	${1:obj}.prependTo('${2:selector expression}')
+	${1:obj}.prependTo("${2:selector expression}")
 snippet prev
-	${1:obj}.prev('${2:selector expression}')
+	${1:obj}.prev("${2:selector expression}")
 snippet preva
-	${1:obj}.prevAll('${2:selector expression}')
+	${1:obj}.prevAll("${2:selector expression}")
 snippet prevu
-	${1:obj}.prevUntil('${2:selector expression}'${3:, 'filter expression'})
+	${1:obj}.prevUntil("${2:selector expression}"${3:, "filter expression"})
 snippet promise
-	${1:obj}.promise(${2:'fx'}, ${3:target})
+	${1:obj}.promise(${2:"fx"}, ${3:target})
 snippet prop
-	${1:obj}.prop('${2:property name}')
+	${1:obj}.prop("${2:property name}")
 snippet proxy
 	$.proxy(${1:function}, ${2:this})
 snippet pushstack
@@ -475,15 +475,15 @@ snippet ready
 snippet rem
 	${1:obj}.remove()
 snippet rema
-	${1:obj}.removeAttr('${2:attribute name}')
+	${1:obj}.removeAttr("${2:attribute name}")
 snippet remc
-	${1:obj}.removeClass('${2:class name}')
+	${1:obj}.removeClass("${2:class name}")
 snippet remd
-	${1:obj}.removeData('${2:key name}')
+	${1:obj}.removeData("${2:key name}")
 snippet remdd
-	$.removeData(${1:element}${2:, 'key name}')
+	$.removeData(${1:element}${2:, "key name}")
 snippet remp
-	${1:obj}.removeProp('${2:property name}')
+	${1:obj}.removeProp("${2:property name}")
 snippet repa
 	${1:obj}.replaceAll(${2:target})
 snippet repw
@@ -505,9 +505,9 @@ snippet scrolll
 snippet scrollt
 	${1:obj}.scrollTop(${2:value})
 snippet sdown
-	${1:obj}.slideDown('${2:slow/400/fast}')
+	${1:obj}.slideDown("${2:slow/400/fast}")
 snippet sdownc
-	${1:obj}.slideDown('${2:slow/400/fast}', function () {
+	${1:obj}.slideDown("${2:slow/400/fast}", function () {
 		${0:// callback};
 	});
 snippet select
@@ -519,33 +519,33 @@ snippet serialize
 snippet serializea
 	${1:obj}.serializeArray()
 snippet show
-	${1:obj}.show('${2:slow/400/fast}')
+	${1:obj}.show("${2:slow/400/fast}")
 snippet showc
-	${1:obj}.show('${2:slow/400/fast}', function () {
+	${1:obj}.show("${2:slow/400/fast}", function () {
 		${0:// callback}
 	});
 snippet sib
-	${1:obj}.siblings('${2:selector expression}')
+	${1:obj}.siblings("${2:selector expression}")
 snippet size
 	${1:obj}.size()
 snippet slice
 	${1:obj}.slice(${2:start}${3:, end})
 snippet stoggle
-	${1:obj}.slideToggle('${2:slow/400/fast}')
+	${1:obj}.slideToggle("${2:slow/400/fast}")
 snippet stop
-	${1:obj}.stop('${2:queue}', ${3:false}, ${4:false})
+	${1:obj}.stop("${2:queue}", ${3:false}, ${4:false})
 snippet submit
 	${1:obj}.submit(function (${2:e}) {
 		${0:// event handler}
 	});
 snippet sup
-	${1:obj}.slideUp('${2:slow/400/fast}')
+	${1:obj}.slideUp("${2:slow/400/fast}")
 snippet supc
-	${1:obj}.slideUp('${2:slow/400/fast}', function () {
+	${1:obj}.slideUp("${2:slow/400/fast}", function () {
 		${0:// callback};
 	});
 snippet text
-	${1:obj}.text(${2:'some text'})
+	${1:obj}.text(${2:"some text"})
 snippet this
 	$(this)
 snippet toarr
@@ -558,19 +558,19 @@ snippet tog
 	});
 	${0}
 snippet togclass
-	${1:obj}.toggleClass('${2:class name}')
+	${1:obj}.toggleClass("${2:class name}")
 snippet togsh
-	${1:obj}.toggle('${2:slow/400/fast}')
+	${1:obj}.toggle("${2:slow/400/fast}")
 snippet trig
-	${1:obj}.trigger('${2:event name}')
+	${1:obj}.trigger("${2:event name}")
 snippet trigh
-	${1:obj}.triggerHandler('${2:event name}')
+	${1:obj}.triggerHandler("${2:event name}")
 snippet $trim
 	$.trim(${1:str})
 snippet $type
 	$.type(${1:obj})
 snippet unbind
-	${1:obj}.unbind('${2:event name}')
+	${1:obj}.unbind("${2:event name}")
 snippet undele
 	${1:obj}.undelegate(${2:selector expression}, ${3:event}, ${4:handler})
 snippet uniq
@@ -582,8 +582,8 @@ snippet unload
 snippet unwrap
 	${1:obj}.unwrap()
 snippet val
-	${1:obj}.val('${2:text}')
+	${1:obj}.val("${2:text}")
 snippet width
 	${1:obj}.width(${2:integer})
 snippet wrap
-	${1:obj}.wrap('${2:&lt;div class="extra-wrapper"&gt;&lt;/div&gt;}')
+	${1:obj}.wrap("${2:&lt;div class="extra-wrapper"&gt;&lt;/div&gt;}")
